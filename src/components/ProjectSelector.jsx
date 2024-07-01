@@ -11,7 +11,11 @@ const ProjectSelector = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleChange = (e) => {
+        if(clickonGo!==""){
+            setclickonGo("");
+        }
         setSelectedProject(e.target.value);
+        console.log(e.target.value)
     };
 
     const handleGoClick = () => {
@@ -23,6 +27,9 @@ const ProjectSelector = () => {
         setIsHovered(true);
     };
 
+    const resetClickonGo = () => {
+        setclickonGo("");
+    };
     const handleMouseLeave = () => {
         setIsHovered(false);
     };
@@ -44,8 +51,8 @@ const ProjectSelector = () => {
                 <div style={selectorStyle}>
                     <select value={selectedProject} onChange={handleChange} style={dropdownStyle}>
                         <option value="">Choose Project</option>
-                        <option value="West Weybridge 132kV Auto Close Scheme">West Weybridge 132kV Auto Close Scheme</option>
-                        <option value="Tower Line Strategic Spares">Tower Line Strategic Spares</option>
+                        <option value="1">West Weybridge 132kV Auto Close Scheme</option>
+                        <option value="2">Tower Line Strategic Spares</option>
                     </select>
                     <button 
                         onClick={handleGoClick} 
@@ -58,9 +65,12 @@ const ProjectSelector = () => {
                 </div>
             </div>
             <div>
+                
                 {clickonGo !== "" && <ProjectTimeline />} 
             </div>
-            {clickonGo !== "" && <Footer projectID="X-S.IPJ.107861" projectName="West Weybridge 132kV Auto Close Scheme" projectManager="Glenn Harris" DeliveryMember ="Clancy" DesignManager="Phil Hobbs" actionOne="Business objectivies & scope identified" actionTwo="CU budget identified" actionThree="Allocate scheme to delivery route" />}
+            {clickonGo !== "" && selectedProject==1 && <Footer projectID="X-S.IPJ.107861" projectName="West Weybridge 132kV Auto Close Scheme" projectManager="Glenn Harris" DeliveryMember ="Clancy" DesignManager="Phil Hobbs" actionOne="Business objectivies & scope identified" actionTwo="CU budget identified" actionThree="Allocate scheme to delivery route" />}
+            
+            {clickonGo !== "" && selectedProject==2 && <Footer projectID="X-S.IPJ.107861" projectName="Tower Line Strategic Spares" projectManager="Glenn Harris" DeliveryMember ="Clancy" DesignManager="Phil Hobbs" actionOne="Business objectivies & scope identified" actionTwo="CU budget identified" actionThree="Allocate scheme to delivery route" />}
             
         </>
     );
