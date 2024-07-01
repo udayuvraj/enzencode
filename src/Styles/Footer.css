@@ -1,0 +1,82 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+.first{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+}
+
+.second{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+.third{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+.sub {
+    margin: 5px;
+    padding: 2px;
+    border: 2px lightsalmon;
+    width: 30%;
+    height: 16.8rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Light layer color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+}
+
+
+.display-heading{
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.m-5{
+    margin: 0.5rem;
+}
+
+.makeflex{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.alignn{
+    align-items: center;
+    justify-content: center;
+}
+
+.tag{
+    text-decoration: none;
+    color: orange;
+}
+.projectHeading{
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    justify-content: left;
+    
+    /* align-items: flex-start; */
+}
+.desc{
+    width: 60%;
+    display: flex;
+    justify-content: left;
+}
